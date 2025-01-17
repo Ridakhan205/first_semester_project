@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Apply background image to the body */
+        body {
+            background-image: url("{{ url_for('static', filename='digital-technology-background-vector-with-hexagon-border-dark-purple-tone_53876-126074.avif') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            font-size: 2em;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        ol {
+            color: white;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comprehensive Quiz</h1>
+    <form action="/submit_quiz" method="POST">
+        <h2>Python Fundamentals</h2>
+        <ol>
+            <li>What is the correct syntax to output "Hello, World!" in Python?
+                <ul>
+                    <li><input type="radio" name="python_q1" value="a"> echo("Hello, World!")</li>
+                    <li><input type="radio" name="python_q1" value="b"> printf("Hello, World!")</li>
+                    <li><input type="radio" name="python_q1" value="c"> print("Hello, World!")</li>
+                    <li><input type="radio" name="python_q1" value="d"> echo "Hello, World!"</li>
+                </ul>
+            </li>
+            <!-- Add more questions here -->
+        </ol>
+
+        <h2>Introduction to Computing</h2>
+        <ol>
+            <li>What does CPU stand for?
+                <ul>
+                    <li><input type="radio" name="computing_q1" value="a"> Central Programming Unit</li>
+                    <li><input type="radio" name="computing_q1" value="b"> Central Processing Unit</li>
+                    <li><input type="radio" name="computing_q1" value="c"> Computer Processing Unit</li>
+                    <li><input type="radio" name="computing_q1" value="d"> Control Processing Unit</li>
+                </ul>
+            </li>
+            <!-- Add more questions here -->
+        </ol>
+
+        <h2>Linear Algebra</h2>
+        <ol>
+            <li>What is the rank of a matrix?
+                <ul>
+                    <li><input type="radio" name="linear_q1" value="a"> The number of rows in the matrix</li>
+                    <li><input type="radio" name="linear_q1" value="b"> The number of columns in the matrix</li>
+                    <li><input type="radio" name="linear_q1" value="c"> The maximum number of linearly independent rows or columns</li>
+                    <li><input type="radio" name="linear_q1" value="d"> The determinant of the matrix</li>
+                </ul>
+            </li>
+            <!-- Add more questions here -->
+        </ol>
+
+        <br>
+        <input class="button" type="submit" value="Submit Quiz">
+    </form>
+</body>
+</html>
